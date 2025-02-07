@@ -1,0 +1,17 @@
+import { Poppins } from 'next/font/google';
+
+// Load the Poppins font
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+});
+
+export const AboutParagraph = () => {
+  return (
+    <div className={`max-w-sm rounded overflow-hidden shadow-lg bg-slate-800 p-6 ${poppins.className}`}>
+      <p className="text-sm text-slate-100">
+        Hey! I am Arghya, a highschool student studying in the International Baccalaureate Program. As a tech enthusiast, I enjoy working with electronics and like to code in my free time. I help to manage websites for various non-profit organizations too! I am also a part of Vex Robotics team 31331-B. In my free time, I enjoy playing basketball, learn about science and math, video games, and more! 
+      </p>
+    </div>
+  );
+};
