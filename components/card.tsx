@@ -34,7 +34,7 @@ export const ProfileCard = () => {
   };
 
   return (
-    <div className={`max-w-sm rounded overflow-hidden shadow-lg bg-slate-800 p-6 ${poppins.className}`}>
+    <div className={`max-w-md rounded overflow-hidden shadow-lg bg-slate-800 p-6 rounded-md ${poppins.className}`}>
       <div className="flex justify-center">
         <Image
           src="/arghya.jpg"
@@ -44,7 +44,7 @@ export const ProfileCard = () => {
           className="rounded-full"
         />
       </div>
-      <div className="text-center mt-4">
+      <div className="text-center mt-3">
         <h1 className="text-xl text-slate-100 font-bold">Arghya Vyas</h1>
         <p className="text-sm text-slate-100 mt-2">
           A passionate highschooler always looking to create something new.
