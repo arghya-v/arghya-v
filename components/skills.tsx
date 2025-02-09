@@ -39,7 +39,7 @@ export const SkillsComponent = () => {
             className="flex flex-col items-center justify-center bg-slate-900 rounded-xl p-3 md:p-4 shadow-md aspect-square"
           >
             {icon}
-            <p className="text-2xl md:text-4xl font-medium">{label}</p>
+            <p className="text-2xl md:text-3xl font-medium">{label}</p>
           </div>
         ))}
       </div>
