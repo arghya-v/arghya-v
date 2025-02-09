@@ -35,6 +35,7 @@ export const ProfileCard = () => {
 
   return (
     <div className={`max-w-md rounded overflow-hidden shadow-lg bg-slate-800 p-6 rounded-md ${poppins.className}`}>
+      {/* Profile Picture */}
       <div className="flex justify-center">
         <Image
           src="/arghya.jpg"
@@ -44,6 +45,8 @@ export const ProfileCard = () => {
           className="rounded-full"
         />
       </div>
+
+      {/* Profile Info */}
       <div className="text-center mt-3">
         <h1 className="text-xl text-slate-100 font-bold">Arghya Vyas</h1>
         <p className="text-sm text-slate-100 mt-2">
@@ -56,14 +59,22 @@ export const ProfileCard = () => {
           <span className="text-blue-500">@FutureMD</span>
         </p>
       </div>
+
+      {/* Copy Email Button */}
       <div className="mt-6">
         <button
           onClick={handleCopyEmail}
-          className="w-full bg-gray-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-all duration-200"
+          className="w-full px-6 py-3 rounded-lg text-white 
+            bg-blue-900/30 backdrop-blur-md border border-blue-400/20 
+            shadow-lg shadow-blue-500/10 transition-all duration-300 
+            hover:bg-blue-900/50 hover:shadow-blue-500/20 
+            focus:outline-none focus:ring-2 focus:ring-blue-400/40 focus:ring-offset-2 
+            disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isCopied ? 'Copied!' : 'Copy Email'}
         </button>
       </div>
+
       {/* Social Media Buttons */}
       {isMounted && (
         <div className="mt-6 flex justify-center space-x-4">
