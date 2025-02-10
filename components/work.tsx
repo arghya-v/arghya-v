@@ -67,7 +67,8 @@ export const WorkExperience = () => {
   ];
 
   return (
-    <div className={`w-full max-w-5xl mx-auto rounded-md shadow-lg bg-slate-800 p-6 ${poppins.className}`}>
+    <div className={`w-full max-w-5xl mx-auto rounded-md shadow-lg bg-slate-800 p-6 
+      transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 ${poppins.className}`}>
       <h2 className="text-2xl font-bold text-slate-100 mb-6">Work Experience</h2>
       <div className="h-[70vh] min-h-[200px] max-h-[340px] overflow-y-auto pr-3 scrollbar-thin scrollbar-thumb-slate-500 scrollbar-track-slate-700 hover:scrollbar-thumb-slate-400 scrollbar-thumb-rounded-md">
         <div className="space-y-6">

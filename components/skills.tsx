@@ -3,7 +3,6 @@ import { MdOutlineBuild } from 'react-icons/md';
 import { Poppins } from 'next/font/google';
 import { GiRobotLeg } from "react-icons/gi";
 
-
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '500', '700'],
@@ -12,7 +11,9 @@ const poppins = Poppins({
 export const SkillsComponent = () => {
   return (
     <div
-      className={`flex flex-col items-center justify-center bg-slate-800 text-slate-100 py-6 px-6 md:px-10 rounded-md shadow-lg w-full max-w-5xl mx-auto ${poppins.className}`}
+      className={`flex flex-col items-center justify-center bg-slate-800 text-slate-100 py-6 px-6 md:px-10 rounded-md shadow-lg 
+        transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 
+        w-full max-w-5xl mx-auto ${poppins.className}`}
     >
       <h1 className="text-2xl md:text-xl font-bold mb-6">My Skills</h1>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">

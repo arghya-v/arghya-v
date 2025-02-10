@@ -34,7 +34,8 @@ export const ProfileCard = () => {
   };
 
   return (
-    <div className={`max-w-md rounded overflow-hidden shadow-lg bg-slate-800 p-6 rounded-md ${poppins.className}`}>
+    <div 
+  className={`max-w-md rounded overflow-hidden shadow-lg bg-slate-800 p-6 rounded-md transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 ${poppins.className}`}>
       {/* Profile Picture */}
       <div className="flex justify-center">
         <Image
