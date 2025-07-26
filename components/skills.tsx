@@ -1,11 +1,11 @@
-import { FaPython, FaReact } from 'react-icons/fa';
-import { MdOutlineBuild } from 'react-icons/md';
-import { Poppins } from 'next/font/google';
+import { FaPython, FaReact } from "react-icons/fa";
+import { MdOutlineBuild } from "react-icons/md";
+import { Poppins } from "next/font/google";
 import { GiRobotLeg } from "react-icons/gi";
 
 const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
 });
 
 export const SkillsComponent = () => {
@@ -19,19 +19,27 @@ export const SkillsComponent = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
         {[
           {
-            icon: <FaPython className="text-yellow-400 text-6xl md:text-7xl mb-2" />,
+            icon: (
+              <FaPython className="text-yellow-400 text-6xl md:text-7xl mb-2" />
+            ),
             label: "Python",
           },
           {
-            icon: <MdOutlineBuild className="text-white text-6xl md:text-7xl mb-2" />,
+            icon: (
+              <MdOutlineBuild className="text-white text-6xl md:text-7xl mb-2" />
+            ),
             label: "STEM",
           },
           {
-            icon: <FaReact className="text-blue-400 text-6xl md:text-7xl mb-2" />,
+            icon: (
+              <FaReact className="text-blue-400 text-6xl md:text-7xl mb-2" />
+            ),
             label: "Web-Dev",
           },
           {
-            icon: <GiRobotLeg className="text-red-400 text-6xl md:text-7xl mb-2" />,
+            icon: (
+              <GiRobotLeg className="text-red-400 text-6xl md:text-7xl mb-2" />
+            ),
             label: "Robotics",
           },
         ].map(({ icon, label }, index) => (
@@ -40,7 +48,9 @@ export const SkillsComponent = () => {
             className="flex flex-col items-center justify-center bg-slate-900 rounded-xl p-3 md:p-4 shadow-md aspect-square"
           >
             {icon}
-            <p className="text-2xl md:text-3xl font-medium">{label}</p>
+            <p className="text-xl md:text-2xl font-medium whitespace-nowrap text-center">
+              {label}
+            </p>
           </div>
         ))}
       </div>
