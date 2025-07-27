@@ -68,42 +68,38 @@ export const WorkExperience = () => {
 
   return (
     <div
-      className={`w-full h-full rounded-md shadow-lg bg-slate-800 p-6 
+      className={`w-full flex flex-col rounded-md shadow-lg bg-slate-800 p-6 
         transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 ${poppins.className}`}
+      style={{ maxHeight: 'calc(100vh - 160px)' }} // adjust 160px based on header+footer size
     >
       <h2 className="text-2xl font-bold text-slate-100 mb-6">Work Experience</h2>
-      <div className="h-[70vh] min-h-[200px] max-h-[340px] overflow-y-auto pr-3 
-        scrollbar-thin scrollbar-thumb-slate-500 scrollbar-track-slate-700 
-        hover:scrollbar-thumb-slate-400 scrollbar-thumb-rounded-md"
-      >
-        <div className="space-y-6">
-          {workExperiences.map((exp, index) => (
-            <div
-              key={index}
-              className="bg-slate-700/20 p-4 rounded-md border border-slate-600/30"
-            >
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="font-semibold text-lg text-slate-100">{exp.role}</h3>
-                  <p className="text-slate-300 text-sm mt-1">@{exp.company}</p>
-                </div>
-                <span className="text-slate-400 text-sm whitespace-nowrap pl-2">
-                  {exp.duration}
-                </span>
+      <div className="overflow-y-auto pr-2 space-y-6 scrollbar-thin scrollbar-thumb-slate-500 scrollbar-track-slate-700 hover:scrollbar-thumb-slate-400 scrollbar-thumb-rounded-md">
+        {workExperiences.map((exp, index) => (
+          <div
+            key={index}
+            className="bg-slate-700/20 p-4 rounded-md border border-slate-600/30"
+          >
+            <div className="flex justify-between items-start">
+              <div>
+                <h3 className="font-semibold text-lg text-slate-100">{exp.role}</h3>
+                <p className="text-slate-300 text-sm mt-1">@{exp.company}</p>
               </div>
-              <ul className="list-disc list-inside space-y-2 ml-4 mt-3">
-                {exp.achievements.map((achievement, idx) => (
-                  <li
-                    key={idx}
-                    className="text-sm text-slate-300 leading-relaxed"
-                  >
-                    {achievement}
-                  </li>
-                ))}
-              </ul>
+              <span className="text-slate-400 text-sm whitespace-nowrap pl-2">
+                {exp.duration}
+              </span>
             </div>
-          ))}
-        </div>
+            <ul className="list-disc list-inside space-y-2 ml-4 mt-3">
+              {exp.achievements.map((achievement, idx) => (
+                <li
+                  key={idx}
+                  className="text-sm text-slate-300 leading-relaxed"
+                >
+                  {achievement}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </div>
   );

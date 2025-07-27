@@ -14,16 +14,11 @@ const FaLinkedin = dynamic(
   () => import("react-icons/fa").then((mod) => mod.FaLinkedin),
   { ssr: false }
 );
-const FaInstagram = dynamic(
-  () => import("react-icons/fa").then((mod) => mod.FaInstagram),
-  { ssr: false }
-);
 const FaGithub = dynamic(
   () => import("react-icons/fa").then((mod) => mod.FaGithub),
   { ssr: false }
 );
 
-// Copy Email System
 export const ProfileCard = () => {
   const [isCopied, setIsCopied] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -44,7 +39,8 @@ export const ProfileCard = () => {
 
   return (
     <div
-      className={`max-w-md rounded overflow-hidden shadow-lg bg-slate-800 p-6 rounded-md transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 ${poppins.className}`}
+      className={`w-full rounded-md overflow-hidden shadow-lg bg-slate-800 p-6 
+        transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 ${poppins.className}`}
     >
       {/* Profile Picture */}
       <div className="flex justify-center">
@@ -84,20 +80,23 @@ export const ProfileCard = () => {
           {isCopied ? "Copied!" : "Copy Email"}
         </button>
       </div>
+
+      {/* Book a Call Button */}
       <div className="mt-4">
         <a
           href="https://cal.com/arghya-v"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full block text-center px-6 py-3 rounded-lg text-white 
-      bg-green-900/30 backdrop-blur-md border border-green-400/20 
-      shadow-lg shadow-green-500/10 transition-all duration-300 
-      hover:bg-green-900/50 hover:shadow-green-500/20 
-      focus:outline-none focus:ring-2 focus:ring-green-400/40 focus:ring-offset-2"
+            bg-green-900/30 backdrop-blur-md border border-green-400/20 
+            shadow-lg shadow-green-500/10 transition-all duration-300 
+            hover:bg-green-900/50 hover:shadow-green-500/20 
+            focus:outline-none focus:ring-2 focus:ring-green-400/40 focus:ring-offset-2"
         >
           Book a Call
         </a>
       </div>
+
       {/* Social Media Buttons */}
       {isMounted && (
         <div className="mt-6 flex justify-center space-x-4">
