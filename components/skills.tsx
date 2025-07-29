@@ -1,60 +1,70 @@
 import { FaPython, FaReact } from "react-icons/fa";
 import { MdOutlineBuild } from "react-icons/md";
-import { Poppins } from "next/font/google";
 import { GiRobotLeg } from "react-icons/gi";
+import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
 });
 
+const GradientIcon = ({ Icon }: { Icon: React.ElementType }) => (
+  <Icon
+    className="text-6xl md:text-7xl mb-2"
+    style={{ fill: "url(#whiteGreyGradient)" }}
+  />
+);
+
 export const SkillsComponent = () => {
+  const skills = [
+    { Icon: FaPython, label: "Python" },
+    { Icon: MdOutlineBuild, label: "STEM" },
+    { Icon: FaReact, label: "Web-Dev" },
+    { Icon: GiRobotLeg, label: "Robotics" },
+  ];
+
   return (
-    <div
-      className={`flex flex-col items-center justify-center bg-slate-800 text-slate-100 py-6 px-6 md:px-10 rounded-md shadow-lg 
-        transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 
-        w-full max-w-5xl mx-auto ${poppins.className}`}
-    >
-      <h1 className="text-2xl md:text-xl font-bold mb-6">My Skills</h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
-        {[
-          {
-            icon: (
-              <FaPython className="text-yellow-400 text-6xl md:text-7xl mb-2" />
-            ),
-            label: "Python",
-          },
-          {
-            icon: (
-              <MdOutlineBuild className="text-white text-6xl md:text-7xl mb-2" />
-            ),
-            label: "STEM",
-          },
-          {
-            icon: (
-              <FaReact className="text-blue-400 text-6xl md:text-7xl mb-2" />
-            ),
-            label: "Web-Dev",
-          },
-          {
-            icon: (
-              <GiRobotLeg className="text-red-400 text-6xl md:text-7xl mb-2" />
-            ),
-            label: "Robotics",
-          },
-        ].map(({ icon, label }, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center justify-center bg-slate-900 rounded-xl p-3 md:p-4 shadow-md aspect-square"
-          >
-            {icon}
-            <p className="text-xl md:text-2xl font-medium whitespace-nowrap text-center">
-              {label}
-            </p>
-          </div>
-        ))}
+    <>
+      {/* Hidden SVG gradient defs */}
+      <svg
+        style={{ width: 0, height: 0, position: "absolute" }}
+        aria-hidden="true"
+        focusable="false"
+      >
+        <defs>
+          <linearGradient id="whiteGreyGradient" x2="1" y2="1">
+            <stop offset="0%" stopColor="#ffffff" />
+            <stop offset="100%" stopColor="#a0a0a0" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <div
+        className={`w-full max-w-5xl mx-auto rounded-xl overflow-hidden bg-gradient-to-b from-[#1e1b3a] to-[#0f0c29] p-6
+          shadow-xl transition-all duration-300 hover:shadow-purple-600/40 border border-slate-700
+          flex flex-col items-center justify-center
+          ${poppins.className}`}
+      >
+        <h1 className="text-3xl font-bold text-white mb-6">My Skills</h1>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full">
+          {skills.map(({ Icon, label }, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center
+                bg-gradient-to-b from-[#2a254a] to-[#1c1833]
+                rounded-xl p-6 shadow-md border border-purple-700/30
+                aspect-square"
+            >
+              <GradientIcon Icon={Icon} />
+              <p className="text-xl md:text-2xl font-medium whitespace-nowrap text-center text-slate-300 mt-2">
+                {label}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

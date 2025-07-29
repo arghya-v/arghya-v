@@ -3,13 +3,11 @@ import { useState, useEffect } from "react";
 import { Poppins } from "next/font/google";
 import dynamic from "next/dynamic";
 
-// Load the Poppins font
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
 });
 
-// Dynamically import icons to avoid SSR issues
 const FaLinkedin = dynamic(
   () => import("react-icons/fa").then((mod) => mod.FaLinkedin),
   { ssr: false }
@@ -39,8 +37,8 @@ export const ProfileCard = () => {
 
   return (
     <div
-      className={`w-full rounded-md overflow-hidden shadow-lg bg-slate-800 p-6 
-        transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 ${poppins.className}`}
+      className={`w-full rounded-xl overflow-hidden shadow-xl bg-gradient-to-b from-[#1e1b3a] to-[#0f0c29] p-6
+        transition-all duration-300 hover:shadow-purple-600/40 border border-slate-700 ${poppins.className}`}
     >
       {/* Profile Picture */}
       <div className="flex justify-center">
@@ -49,20 +47,20 @@ export const ProfileCard = () => {
           alt="Arghya Vyas"
           width={150}
           height={150}
-          className="rounded-full"
+          className="rounded-full border-4 border-purple-500/40"
         />
       </div>
 
       {/* Profile Info */}
-      <div className="text-center mt-3">
-        <h1 className="text-xl text-slate-100 font-bold">Arghya Vyas</h1>
-        <p className="text-sm text-slate-100 mt-2">
+      <div className="text-center mt-4">
+        <h1 className="text-2xl text-white font-bold">Arghya Vyas</h1>
+        <p className="text-sm text-slate-300 mt-2">
           A passionate highschooler always looking to create something new.
         </p>
-        <p className="text-sm text-slate-400 mt-6">
-          Director of IT <span className="text-blue-500">@Youth Venture</span>{" "}
-          and <span className="text-blue-500">@Dr. Interested</span>, Design and
-          Development <span className="text-blue-500">@FutureMD</span>
+        <p className="text-sm text-slate-400 mt-4">
+          Director of IT <span className="text-purple-400">@Youth Venture</span> and{" "}
+          <span className="text-purple-400">@Dr. Interested</span>, Design &
+          Development <span className="text-purple-400">@FutureMD</span>
         </p>
       </div>
 
@@ -71,11 +69,8 @@ export const ProfileCard = () => {
         <button
           onClick={handleCopyEmail}
           className="w-full px-6 py-3 rounded-lg text-white 
-            bg-blue-900/30 backdrop-blur-md border border-blue-400/20 
-            shadow-lg shadow-blue-500/10 transition-all duration-300 
-            hover:bg-blue-900/50 hover:shadow-blue-500/20 
-            focus:outline-none focus:ring-2 focus:ring-blue-400/40 focus:ring-offset-2 
-            disabled:opacity-50 disabled:cursor-not-allowed"
+            bg-purple-900/40 border border-purple-500/20 
+            shadow-md transition hover:bg-purple-800/60 hover:shadow-purple-500/30"
         >
           {isCopied ? "Copied!" : "Copy Email"}
         </button>
@@ -88,33 +83,31 @@ export const ProfileCard = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="w-full block text-center px-6 py-3 rounded-lg text-white 
-            bg-green-900/30 backdrop-blur-md border border-green-400/20 
-            shadow-lg shadow-green-500/10 transition-all duration-300 
-            hover:bg-green-900/50 hover:shadow-green-500/20 
-            focus:outline-none focus:ring-2 focus:ring-green-400/40 focus:ring-offset-2"
+            bg-indigo-900/40 border border-indigo-400/20 
+            shadow-md transition hover:bg-indigo-800/60 hover:shadow-indigo-400/30"
         >
           Book a Call
         </a>
       </div>
 
-      {/* Social Media Buttons */}
+      {/* Social Media */}
       {isMounted && (
-        <div className="mt-6 flex justify-center space-x-4">
+        <div className="mt-6 flex justify-center space-x-5">
           <a
             href="https://www.linkedin.com/in/arghya-vyas-2a40a72b1/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-slate-100 hover:text-blue-500 transition-all duration-200"
+            className="text-white hover:text-purple-400 transition"
           >
-            <FaLinkedin className="w-10 h-10" />
+            <FaLinkedin className="w-8 h-8" />
           </a>
           <a
             href="https://github.com/arghya-v"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-slate-100 hover:text-gray-400 transition-all duration-200"
+            className="text-white hover:text-slate-400 transition"
           >
-            <FaGithub className="w-10 h-10" />
+            <FaGithub className="w-8 h-8" />
           </a>
         </div>
       )}
