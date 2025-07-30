@@ -6,17 +6,17 @@ import Footer from '../components/footer';
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-slate-900">
-      <main className="flex flex-col md:flex-row justify-start items-start flex-grow pt-10 px-10 md:space-x-6">
-        {/* Left Column - Profile & About */}
-        <div className="flex flex-col space-y-6 md:mt-0 md:w-1/3">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-purple-900">
+      <main className="flex flex-col md:flex-row justify-start items-start flex-grow pt-10 px-6 md:px-10 gap-10">
+        {/* Left Column - Profile, About, Skills */}
+        <div className="flex flex-col space-y-6 md:w-1/3">
           <ProfileCard />
           <AboutParagraph />
+          <SkillsComponent />
         </div>
 
-        {/* Right Column - Skills & Work Experience */}
-        <div className="mt-6 md:mt-0 md:w-2/3 flex flex-col space-y-6">
-          <SkillsComponent />
+        {/* Right Column - Work Experience */}
+        <div className="flex flex-col md:w-2/3">
           <WorkExperience />
         </div>
       </main>
