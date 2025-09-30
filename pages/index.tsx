@@ -3,7 +3,7 @@ import { AboutParagraph } from '../components/paragraph';
 import { SkillsComponent } from '../components/skills';
 import { WorkExperience } from '../components/work';
 import Footer from '../components/footer';
-
+import { Analytics } from "@vercel/analytics/next"
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-[#0f0c29] via-[#1e1b3a] to-purple-900">
@@ -20,7 +20,7 @@ export default function Home() {
           <WorkExperience />
         </div>
       </main>
-
+      <Analytics />
       <Footer />
     </div>
   );
