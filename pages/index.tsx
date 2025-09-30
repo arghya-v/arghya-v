@@ -6,6 +6,7 @@ import Footer from '../components/footer';
 import { Analytics } from "@vercel/analytics/next"
 export default function Home() {
   return (
+
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-[#0f0c29] via-[#1e1b3a] to-purple-900">
       <main className="flex flex-col md:flex-row justify-start items-start flex-grow pt-10 px-6 md:px-10 gap-10">
         {/* Left Column - Profile, About, Skills */}
