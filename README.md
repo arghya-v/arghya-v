@@ -34,7 +34,7 @@
     <img src="https://img.shields.io/badge/Email-red?logo=gmail&logoColor=white" />
   </a>
   <a href="https://arghyav.vercel.app/">
-    <img src="https://img.shields.io/badge/My%20website:-%20arghyav.vercel.app-blue" />
+    <img src="https://img.shields.io/badge/My%20website:-%20arghyavyas.ca-blue" />
   </a>
 </p>
 <h2 align="left">🎯 Fun Facts</h2>
