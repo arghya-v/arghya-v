@@ -121,7 +121,7 @@ export default function Home() {
               target="_blank"
               className="underline decoration-[#FF9FFC] hover:scale-105 hover:text-[#ffcaff] inline-block transition-all duration-300"
             >
-              full stack web search engine
+              full stack flight search engine
             </Link>{" "}
             (Flyte)
           </li>
