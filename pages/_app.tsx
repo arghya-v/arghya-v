@@ -1,14 +1,7 @@
 import "@/styles/globals.css";
+import '@fontsource/jetbrains-mono'
 import type { AppProps } from "next/app";
-import Head from "next/head";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Head>
-        <link rel="canonical" href="https://arghyavyas.ca/" />
-      </Head>
-      <Component {...pageProps} />
-    </>
-  );
+  return <Component {...pageProps} />;
 }

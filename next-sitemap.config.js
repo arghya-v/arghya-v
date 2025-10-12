@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: 'https://arghyavyas.ca',
-  generateRobotsTxt: true,           
+  generateRobotsTxt: true, 
   sitemapSize: 7000,
 }
