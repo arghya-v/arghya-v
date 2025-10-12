@@ -24,7 +24,7 @@ export default function Home() {
           iterationsViscous={32}
           iterationsPoisson={32}
           resolution={0.6}
-          isBounce={true}
+          isBounce={false}
           autoDemo={true}
           autoSpeed={0.5}
           autoIntensity={4}
@@ -151,7 +151,7 @@ export default function Home() {
             >
               PID algorithms for VEX Robotics
             </Link>{" "}
-            w/ Python
+            w/ Python, top 40 in the province
           </li>
           <li>
             ↳{" "}
