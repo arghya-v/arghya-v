@@ -14,7 +14,7 @@ export default function Home() {
       <Head>
         <title>Arghya Vyas</title>
         <meta name="description" content="Portfolio of Arghya Vyas" />
-        <link rel="canonical" href="https://www.arghyavyas.ca/" />
+        <link rel="canonical" href="https://arghyavyas.ca/" />
       </Head>
 
       <div className="relative w-screen h-screen overflow-hidden">
