@@ -11,7 +11,7 @@
 
 <p align="left">
   ✨ Helping non-profits with web-dev <br>
-  📚 I'm currently learning OpenCV and other AI libraries <br>
+  📚 Learning to design PCB's <br>
   🤖 Working on Odometry for VRC <br>
   ✈️ Building Flyte: An open source flight search engine
 </p>
